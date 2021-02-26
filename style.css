@@ -1,0 +1,65 @@
+.column {
+    display: flex; 
+    flex-direction: column; 
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(WARTORN_.TTF);
+}
+
+@font-face {
+    font-family: techFont;
+    src: url(militech_r_2019-04-13.ttf);
+}
+  
+body {
+    font-family: myFirstFont;
+}
+
+.grid {
+    width: 400px;
+    height: 600px;
+    background-color: #9a9a9a;
+    position: relative;
+    font-size: 100px;
+    text-align: center;
+}
+
+#currentScore {
+    font-size: 100px;
+    margin: 0;
+}
+
+.doodler {
+    width: 60px;
+    height: 85px;
+    background-image: url(red.gif);
+    position: absolute;
+}
+
+.platform {
+    width: 85px;
+    height: 15px;
+    background-color: green;
+    position: absolute;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color:red;
+}
+
+h2 {
+    color:red;
+}
+
+.selection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
