@@ -1,5 +1,6 @@
 {
  "name": "RedBoxJump",
+ "start_url": ".",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
