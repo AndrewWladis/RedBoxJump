@@ -20,6 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let redCharacter = document.getElementById("redGuy");
     let greenCharacter = document.getElementById("greenGuy");
     let playerIcon;
+    
+    let straightButton = document.getElementById("straightButton");
+    let leftButton = document.getElementById("leftButton");
+    let rightButton = document.getElementById("rightButton");
+
+    straightButton.addEventListener('click', moveStraight)
+    leftButton.addEventListener('click', moveLeft)
+    rightButton.addEventListener('click', moveRight)
 
     function setPlayerToGreenGuy() {
         playerIcon = greenCharacter;

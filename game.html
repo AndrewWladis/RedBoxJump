@@ -33,6 +33,18 @@
     font-family: techFont;
   }
 </style>
+<script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+    
+    document.querySelector('#show').addEventListener('click', () => {
+      const iconUrl = document.querySelector('select').selectedOptions[0].value;
+      let imgElement = document.createElement('img');
+      imgElement.src = iconUrl;
+      document.querySelector('#container').appendChild(imgElement);
+    });
+  </script>
   </head>
   <body>
     <div class="scoreGrid">
@@ -43,6 +55,12 @@
       <div style="display: flex; flex-direction: column;">
       <button style="background-color: rgb(52, 70, 55); font-family: techFont;" onClick="window.location.reload();"><h1 style="font-size: 5.84em;">Re-Start</h1></button>
       <a href="index.html"><button style="background-color: rgb(151, 45, 45); font-family: techFont;"><h1 style="font-size: 5.84em;">Back To Hub</h1></button></a>
+      <br>
+      <div style="display: flex; flex-direction: row; justify-content: space-around; font-family: techFont;">
+        <button id="leftButton" style="background-color: rgb(141, 141, 141); font-family: techFont;"><h1 style="color: black; font-family: techFont;">Left</h1></button>
+        <button id="straightButton" style="background-color: rgb(141, 141, 141); font-family: techFont;"><h1 style="color: black; font-family: techFont;"> | | </h1></button>
+        <button id="rightButton" style="background-color: rgb(141, 141, 141); font-family: techFont;"><h1 style="color: black; font-family: techFont;">Right</h1></button>
+      </div>
     </div>
     </div>
   </body>
