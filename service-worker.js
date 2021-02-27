@@ -37,7 +37,7 @@ const PRECACHE_URLS = [
     "/green/style.css",
     "/green/WARTORN_.TTF"
 ]
-/ The install handler takes care of precaching the resources we always need.
+// The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(PRECACHE)

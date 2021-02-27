@@ -1,6 +1,9 @@
 {
  "name": "RedBoxJump",
  "start_url": ".",
+ "display": "standalone",
+ "background_color": "rgb(129, 39, 39)",
+ "description": "A fun game",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
