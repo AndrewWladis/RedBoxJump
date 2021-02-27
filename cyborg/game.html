@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css"></link>
+    <script src="app.js" charset="utf-8"></script>
     <title>Red Box Jump</title>
-    <script href="app.js" charset="utf-8"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -24,19 +24,13 @@
 <meta name="theme-color" content="#ffffff">
 <style>
   body {
-    background-color: rgb(129, 39, 39);
+    background-color: #4e4e4e
   }
-
-  h1 {
-    color: rgb(168, 168, 168);
-  }
-
-  h2 {
-    color: rgb(168, 168, 168);
-  }
-
-  button {
-    background-color: grey;
+  
+  .scoreGrid {
+    display: flex;
+    flex-direction: row;
+    font-family: techFont;
   }
 </style>
 <script>
@@ -53,29 +47,21 @@
   </script>
   </head>
   <body>
-    <div class="center">
-      <h1>Character Select</h1>
+    <div class="scoreGrid">
+      <div class="grid">
+
+      </div>
+      <button style="background-color: rgb(141, 141, 141);"><h1 style="padding-left: 10px; font-family: techFont;" id="currentScore"></h1></button>
+      <div style="display: flex; flex-direction: column;">
+      <button style="background-color: rgb(52, 70, 55); font-family: techFont;" onClick="window.location.reload();"><h1 style="font-size: 5.84em;">Re-Start</h1></button>
+      <a href="../index.html"><button style="background-color: rgb(151, 45, 45); font-family: techFont;"><h1 style="font-size: 5.84em;">Back To Hub</h1></button></a>
+      <br>
+      <div style="display: flex; flex-direction: row; justify-content: space-around; font-family: techFont;">
+        <button id="leftButton" style="background-color: rgb(141, 141, 141); font-family: techFont;"><h1 style="color: black; font-family: techFont;">Left</h1></button>
+        <button id="straightButton" style="background-color: rgb(141, 141, 141); font-family: techFont;"><h1 style="color: black; font-family: techFont;"> | | </h1></button>
+        <button id="rightButton" style="background-color: rgb(141, 141, 141); font-family: techFont;"><h1 style="color: black; font-family: techFont;">Right</h1></button>
+      </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <div class="selection">
-      <a href="game.html">
-        <button><img id="redGuy" src="red.gif"></button>
-        <p style="color: black;">Agent 0001</p>
-      </a>
-      <a href="green/game.html">
-        <button><img id="greenGuy" src="green/green.gif"></button>
-        <p style="color: black;">Agent 0101</p>
-      </a>
-      <a href="cyborg/game.html">
-        <button><img id="cyborg" src="cyborg/image.gif"></button>
-        <p style="color: black;">Agent 9027</p>
-      </a>
-      <a href="flash/game.html">
-        <button><img id="redGuy" src="flash/Flash.gif"></button>
-        <p style="color: black;">S.T.A.R. Labs 0001</p>
-      </a>
     </div>
   </body>
 </html> 
