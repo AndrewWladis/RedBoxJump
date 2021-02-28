@@ -29,10 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     leftButton.addEventListener('click', moveLeft)
     rightButton.addEventListener('click', moveRight)
 
-    function setPlayerToGreenGuy() {
-        playerIcon = greenCharacter;
-    }      
-
     function setPlayer() {
         playerImage = playerIcon
         console.log('calling set player')
