@@ -152,8 +152,6 @@ document.addEventListener('DOMContentLoaded', () => {
             moveRight()
         } else if (e.key === "ArrowUp") {
             moveStraight()
-        } else if (e.keyCode === 32) {
-            score += 50
         }
     }
 
