@@ -41,7 +41,13 @@ const PRECACHE_URLS = [
     "/green/game.html",
     "/green/militech_r_2019-04-13.ttf",
     "/green/style.css",
-    "/green/WARTORN_.TTF"
+    "/green/WARTORN_.TTF",
+    "/0999/app.js",
+    "/0999/New Piskel.gif",
+    "/0999/game.html",
+    "/0999/militech_r_2019-04-13.ttf",
+    "/0999/style.css",
+    "/0999/WARTORN_.TTF"
 ]
 // The install handler takes care of precaching the resources we always need.
 self.addEventListener('install', event => {
