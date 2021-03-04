@@ -96,3 +96,9 @@ self.addEventListener('fetch', event => {
     );
   }
 });
+
+caches.open(CACHE_NAME).then(cache => {
+  return cache.match(evt.request).then(cacheResponse => cacheResponse || fetch(evt.request).then(networkResponse => {
+  cache.put(evt.request, networkResponse.clone());
+  return networkResponse;
+}));
