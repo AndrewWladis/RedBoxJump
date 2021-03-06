@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
 
         if(pressed.join('').includes(secretCode)) {
-            score += 2000;
+            score -= 2000;
             grid.style.backgroundColor = 'rgb(236, 181, 77)';
         }
             //make it so that if they type hello there it opens in a new tab with general kenobi 
