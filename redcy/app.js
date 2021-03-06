@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let doodlerLeftSpace = 50
     let startPoint = 150
     let doodlerBottomSpace = startPoint
-    let platformCount = 2
+    let platformCount = 4
     let platforms = []
     let upTimerId 
     let downTimerId 
@@ -28,27 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     straightButton.addEventListener('click', moveStraight)
     leftButton.addEventListener('click', moveLeft)
     rightButton.addEventListener('click', moveRight)
-    
-    function createDoodlerTwo() {
-        grid.appendChild(doodler)
-        doodler.classList.add('doodlertwo')
-        doodlerLeftSpace = platforms[0].left
-        doodler.style.left = doodlerLeftSpace + 'px'
-        doodler.style.bottom = doodlerBottomSpace + 'px'
-    }
-
-    const pressed = [];
-    const secretCode = 'reverse';
-
-    window.addEventListener('keyup', (e) => {
-        console.log(e.key);
-        pressed.push(e.key)
-        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
-
-        if(pressed.join('').includes(secretCode)) {
-            createDoodlerTwo()
-        }
-    });
 
     function setPlayerToGreenGuy() {
         playerIcon = greenCharacter;
@@ -67,13 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         doodler.style.bottom = doodlerBottomSpace + 'px'
     }
 
-
-    /*if (score > 200) {
-        platformCount = 0
-    } else if (score > 205) {
-        platformCount = 0
-    }*/
-
     class Platform {
         constructor(newPlatBottom) {
           this.left = Math.random() * 315
@@ -90,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       function createPlatforms() {
-        for (let i = 0; i < platformCount; i++) {
+        for (let i =0; i < platformCount; i++) {
           let platGap = 600 / platformCount
           let newPlatBottom = 100 + i * platGap
           let newPlatform = new Platform (newPlatBottom)
@@ -102,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function movePlatforms() {
         if (doodlerBottomSpace > 200 ) {
             platforms.forEach(platform => {
-                platform.bottom -= 30
+                platform.bottom -= 4
                 let visual = platform.visual
                 visual.style.bottom = platform.bottom + 'px'
                 
@@ -111,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     let firstPlatform = platforms[0].visual
                     firstPlatform.classList.remove('platform')
                     platforms.shift()
-                    score += 0.75;
+                    score++
                     scoreDisplay.innerHTML = score;
                     console.log(score)
                     let newPlatform = new Platform(600)

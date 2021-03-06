@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             score -= 10000;
             grid.style.backgroundColor = 'rgb(236, 181, 77)';
         }
-            //make it so that if they type hello there it opens in a new tab with general kenobi 
     });
 
     function setPlayer() {

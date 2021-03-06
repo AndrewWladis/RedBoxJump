@@ -34,14 +34,14 @@ body {
 .doodler {
     width: 60px;
     height: 85px;
-    background-image: url(red.gif);
+    background-image: url(New\ Piskel.gif);
     position: absolute;
 }
 
 .platform {
     width: 85px;
     height: 15px;
-    background-image: url(platform.png);
+    background-color: rgb(128, 0, 0);
     position: absolute;
 }
 
@@ -62,5 +62,4 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
