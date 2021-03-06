@@ -16,9 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let rightTimerId
     let score = 0;
     let scoreDisplay = document.getElementById("currentScore");
-    let playerImage = document.getElementsByClassName("doodler")
+    let playerImage = document.getElementsByClassName("doodler");
     let redCharacter = document.getElementById("redGuy");
-    let greenCharacter = document.getElementById("greenGuy");
     let playerIcon;
     
     let straightButton = document.getElementById("straightButton");
@@ -29,9 +28,20 @@ document.addEventListener('DOMContentLoaded', () => {
     leftButton.addEventListener('click', moveLeft)
     rightButton.addEventListener('click', moveRight)
 
-    function setPlayerToGreenGuy() {
-        playerIcon = greenCharacter;
-    }      
+    const pressed = [];
+    const secretCode = 'skadoosh';
+
+    window.addEventListener('keyup', (e) => {
+        console.log(e.key);
+        pressed.push(e.key)
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+
+        if(pressed.join('').includes(secretCode)) {
+            score += 2000;
+            grid.style.backgroundColor = 'rgb(236, 181, 77)';
+        }
+            //make it so that if they type hello there it opens in a new tab with general kenobi 
+    });
 
     function setPlayer() {
         playerImage = playerIcon
@@ -51,13 +61,15 @@ document.addEventListener('DOMContentLoaded', () => {
           this.left = Math.random() * 315
           this.bottom = newPlatBottom
           this.visual = document.createElement('div')
-    
+        
           const visual = this.visual
           visual.classList.add('platform')
           visual.style.left = this.left + 'px'
           visual.style.bottom = this.bottom + 'px'
           grid.appendChild(visual)
-
+            if (grid.style.backgroundColor === 'rgb(236, 181, 77)') {
+                visual.style.backgroundColor = 'white';
+            }
         }
       }
 
@@ -134,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function gameOver() {
         console.log('game over')
         isGameOver = true 
+        grid.style.backgroundColor = '#9a9a9a';
         while (grid.firstChild) {
             console.log('remove')
             grid.removeChild(grid.firstChild)
@@ -199,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
             jump()
             document.addEventListener('keyup',control)
             setPlayer()
+            grid.style.backgroundColor = '#9a9a9a';
         } else {
             console.log('game should be over')
         }
