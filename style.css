@@ -64,3 +64,7 @@ h2 {
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
+.trail {
+    box-shadow: 0 0 25px rgb(16, 139, 0);
+}

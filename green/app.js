@@ -103,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 fall()
             }
         },30)
+
     }
 
     function fall() {
