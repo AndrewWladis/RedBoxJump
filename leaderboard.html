@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css"></link>
     <title>Red Box Jump</title>
+    <script href="app.js" charset="utf-8"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -21,7 +22,6 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 <meta name="theme-color" content="#ffffff">
-<script href="app.js"></script>
 <style>
   body {
     background-color: rgb(129, 39, 39);
@@ -35,19 +35,9 @@
     color: rgb(168, 168, 168);
   }
 
-  h5 {
-    color: rgb(168, 168, 168);
-  }
-
-  .buttons {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-  }
 
   button {
-    background-color: rgb(168, 168, 168);
-    font-family: myFirstFont;
+    background-color: grey;
   }
 </style>
 <script>
@@ -65,32 +55,35 @@
   </head>
   <body>
     <div class="center">
-      <h1 style="font-size: 4em;">Red Box Jump</h1>
+      <h1>Leaderboard</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="leaders">
+        <a target="_blank" href="https://www.youtube.com/channel/UC2TIPj3LEbeEF7QDVRgbZGA">
+            <div class="player">
+          <img src="players/strike.jpg"> 
+          <div style="padding: 20px;">
+            <h2 style="color:black;">Star Strike</h2>
+            <h1 style="color:black; font-family: techFont;">256</h1>
+          </div>
+      </div>
+        </a>
+        <br>
+        <a target="_blank" href="https://andrewwladis.netlify.app/">
+            <div class="player">
+          <img src="players/awladis.jpg"> 
+          <div style="padding: 20px;">
+            <h2 style="color:black;">Andrew Wladis</h2>
+            <h1 style="color:black; font-family: techFont;">151</h1>
+          </div>
+      </div>
+        </a>
     </div>
     <br>
     <div class="center">
-      <img style="border-radius: 25px;" src="homepic.png">
+        <h1 style="color:grey; font-family: techFont;">Email your score to <a href="mailto:andywladis@icloud.com">andrewwladis@gmail.com</a> for a chance to be on the leaderboard!</h1>
     </div>
-    <br>
-    <br>
-    <div class="buttons">
-      <a href="game.html">
-        <button>
-          <h1 style="color: black;">START</h1>
-        </button>
-      </a>
-  
-      <a href="choose.html">
-        <button>
-          <h1 style="color: black;">Character Select</h1>
-        </button>
-      </a>
-      <a href="leaderboard.html">
-        <button>
-          <h1 style="color: black;">Leaderboard</h1>
-        </button>
-      </a>
-    </div>
-
   </body>
 </html> 

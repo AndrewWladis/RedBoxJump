@@ -68,3 +68,24 @@ h2 {
 .trail {
     box-shadow: 0 0 25px rgb(16, 139, 0);
 }
+
+.leaders {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.player {
+    height: 200px;
+    width: 400px;
+    background-color: rgb(168, 168, 168);
+    border: 1px solid black;
+    box-shadow: 0 0 25px rgb(139, 0, 0);
+    display: flex;
+    justify-content: space-between;
+}
+
+.player__image {
+    height: 100%;
+}
