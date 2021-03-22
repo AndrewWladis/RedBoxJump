@@ -17,13 +17,10 @@ body {
     font-family: myFirstFont;
 }
 
-.red {
-    color: red;
-}
 .grid {
     width: 400px;
     height: 600px;
-    background-image: url(galaxy.gif);
+    background-image: url(door.jpg);
     position: relative;
     font-size: 100px;
     text-align: center;
@@ -32,19 +29,20 @@ body {
 #currentScore {
     font-size: 100px;
     margin: 0;
+    color:black;
 }
 
 .doodler {
     width: 60px;
     height: 85px;
-    background-image: url(Call\ of\ Duty\ Update\ clone.gif);
+    background-image: url(mike.png);
     position: absolute;
 }
 
 .platform {
     width: 85px;
     height: 15px;
-    background-color: #d5200d;
+    background-color: grey;
     position: absolute;
 }
 
@@ -54,7 +52,7 @@ body {
 }
 
 h1 {
-    color:red;
+    color:rgb(255, 0, 0);
 }
 
 h2 {

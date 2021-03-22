@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let redCharacter = document.getElementById("redGuy");
     let greenCharacter = document.getElementById("greenGuy");
     let playerIcon;
-    let impVic = "Imposter Victory";
     
     let straightButton = document.getElementById("straightButton");
     let leftButton = document.getElementById("leftButton");
@@ -29,6 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     straightButton.addEventListener('click', moveStraight)
     leftButton.addEventListener('click', moveLeft)
     rightButton.addEventListener('click', moveRight)
+
+    function setPlayerToGreenGuy() {
+        playerIcon = greenCharacter;
+    }      
 
     function setPlayer() {
         playerImage = playerIcon
@@ -71,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function movePlatforms() {
         if (doodlerBottomSpace > 200 ) {
             platforms.forEach(platform => {
-                platform.bottom -= 3
+                platform.bottom -= 4
                 let visual = platform.visual
                 visual.style.bottom = platform.bottom + 'px'
                 
@@ -106,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearInterval(upTimerId)
         isJumping = false
         downTimerId = setInterval(function () {
-            doodlerBottomSpace -= 1
+            doodlerBottomSpace -= 5
             doodler.style.bottom = doodlerBottomSpace + 'px'
             if (doodlerBottomSpace <= 0) {
                 gameOver()
@@ -136,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.removeChild(grid.firstChild)
         }
 
-        grid.innerHTML = impVic;
+        grid.innerHTML = "Game Over";
         clearInterval(upTimerId)
         clearInterval(downTimerId)
         clearInterval(leftTimerId)
