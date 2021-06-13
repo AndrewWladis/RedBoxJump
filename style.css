@@ -3,6 +3,11 @@
     flex-direction: column; 
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 @font-face {
     font-family: myFirstFont;
     src: url(WARTORN_.TTF);
